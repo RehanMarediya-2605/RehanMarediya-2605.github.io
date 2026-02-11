@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App</title>
+  <style>
+    body {
+      background: #020617;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .todo {
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+    li {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="todo">
+  <h2>To-Do List</h2>
+  <input id="task" placeholder="Add task">
+  <ul id="list"></ul>
+</div>
+
+<script>
+  const task = document.getElementById("task");
+  const list = document.getElementById("list");
+
+  task.addEventListener("keypress", e => {
+    if (e.key === "Enter" && task.value !== "") {
+      const li = document.createElement("li");
+      li.textContent = task.value;
+      li.onclick = () => li.remove();
+      list.appendChild(li);
+      task.value = "";
+    }
+  });
+</script>
+
+</body>
+</html>
