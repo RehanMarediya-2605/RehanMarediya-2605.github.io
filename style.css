@@ -490,3 +490,35 @@ text-decoration:none;
   color: #00adb5; /* your theme color */
   margin-top: 10px;
 }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h3 {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 10px 0;
+}
+
+.hero h2 {
+  font-size: 22px;
+  color: #00adb5;
+}
+
+.hero-img img {
+  width: 250px;
+  border-radius: 50%;
+  border: 3px solid #00adb5;
+}
