@@ -524,40 +524,6 @@ text-decoration:none;
 }
 
 
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-}
 
-.hero h3 {
-  font-size: 18px;
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.hero h1 {
-  font-size: 60px;
-  color: #fff;
-  margin: 10px 0;
-}
-
-.hero h2 {
-  font-size: 22px;
-  color: #00adb5;
-  margin-bottom: 20px;
-}
-
-.buttons button {
-  margin: 10px;
-  padding: 10px 20px;
-  border: none;
-  background: #00adb5;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.buttons button:hover {
   background: #007b80;
 }
