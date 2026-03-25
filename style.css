@@ -469,3 +469,24 @@ padding:10px 20px;
 border-radius:25px;
 text-decoration:none;
 }
+
+.hero h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #00adb5; /* your theme color */
+  margin-top: 10px;
+}
