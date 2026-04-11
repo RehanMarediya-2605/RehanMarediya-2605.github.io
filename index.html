@@ -285,5 +285,17 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+
+  <script>
+const form = document.querySelector(".contact-form");
+const msg = document.getElementById("success-msg");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  msg.style.display = "block";
+  form.reset();
+});
+</script>
+
 </body>
 </html>
