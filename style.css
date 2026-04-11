@@ -272,3 +272,9 @@ body {
 body {
   background: radial-gradient(circle at top, #0f172a, #020617);
 }
+
+
+.reveal {
+  opacity: 1; /* TEMP FIX */
+  transform: translateY(0);
+}
