@@ -42,13 +42,11 @@ nav {
 /* HERO */
 .hero {
   min-height: 100vh;
-  padding: 120px 8% 0; /* ⬅ pushes content below navbar */
+  padding: 120px 8% 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* LEFT RIGHT */
+  align-items: center; /* vertical align */
 }
-
-
 .big {
   font-size: 64px;
   font-weight: 900;
