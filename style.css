@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +17,11 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  padding: 20px 8%;
+  padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   backdrop-filter: blur(10px);
-  z-index: 10;
+  z-index: 100;
 }
 
 .nav-links a {
@@ -28,6 +29,7 @@ nav {
   text-decoration: none;
   color: white;
   opacity: 0.7;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -35,20 +37,28 @@ nav {
   color: #38bdf8;
 }
 
-/* HERO (FINAL FIX) */
+/* HERO */
 .hero {
   min-height: 100vh;
-  padding: 120px 8% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+/* MAIN CONTENT WRAPPER */
+.hero-content {
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
 
-/* TEXT */
+/* LEFT TEXT */
 .hero-text {
   flex: 1;
-  max-width: 520px;
 }
 
 .hero-text h3 {
@@ -57,34 +67,20 @@ nav {
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 64px;
+  font-weight: 700;
   margin: 10px 0;
 }
 
 .hero-text h2 {
   font-size: 22px;
-  color: #00adb5;
+  color: #38bdf8;
 }
 
 .hero-text p {
   margin-top: 15px;
+  max-width: 500px;
   opacity: 0.8;
-}
-
-/* IMAGE */
-.hero-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-img img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #00adb5;
-  box-shadow: 0 0 40px rgba(0, 173, 181, 0.4);
 }
 
 /* BUTTONS */
@@ -102,6 +98,11 @@ nav {
   font-weight: 600;
   background: linear-gradient(90deg, #38bdf8, #6366f1);
   color: black;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn.outline {
@@ -110,7 +111,23 @@ nav {
   color: white;
 }
 
-/* SOCIAL */
+/* IMAGE */
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 40px rgba(56,189,248,0.3);
+}
+
+/* SOCIAL ICONS */
 .social-icons {
   margin-top: 20px;
   display: flex;
@@ -159,9 +176,16 @@ nav {
   transform: translateY(-8px);
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
-  .hero {
+  .hero-content {
     flex-direction: column;
     text-align: center;
   }
