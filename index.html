@@ -34,7 +34,7 @@
     <div class="hero-text">
       <h3>Hi, I'm Rehan 👋</h3>
       <h1>Rehan Marediya</h1>
-      <h2>💻 Aspiring Software Developer | Web & Android</h2>
+     <h2>💻 <span id="typing"></span></h2>
 
       <p>
         Computer Engineering Student & Web Developer building modern,
@@ -63,7 +63,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section reveal">
 <h2>About Me</h2>
 <p>
 I am a Computer Engineering student with strong interest in web development and modern frontend technologies.
@@ -71,7 +71,7 @@ I am a Computer Engineering student with strong interest in web development and 
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="section">
+<section id="education" class="section reveal">
 <h2>Education</h2>
 <div class="education-card">
 <h3>Diploma in Computer Engineering</h3>
@@ -81,7 +81,7 @@ I am a Computer Engineering student with strong interest in web development and 
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section">
+<section id="skills" class="section reveal">
 <h2>Skills</h2>
 <div class="skills">
 <div class="skill">HTML5</div>
@@ -93,7 +93,7 @@ I am a Computer Engineering student with strong interest in web development and 
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
+<section id="projects" class="section reveal">
 <h2>Projects</h2>
 
 <div class="projects">
@@ -134,7 +134,7 @@ I am a Computer Engineering student with strong interest in web development and 
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certificates" class="section">
+<section id="certificates" class="section reveal">
 <h2>Certificates</h2>
 
 <div class="certificates-grid">
@@ -167,7 +167,7 @@ I am a Computer Engineering student with strong interest in web development and 
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section reveal">
 <h2>Contact</h2>
 <p>Email: rehanmarediya26@gmail.com</p>
 <p>Phone: +91 9712576396</p>
@@ -176,6 +176,33 @@ I am a Computer Engineering student with strong interest in web development and 
 <footer>
 <p>© 2026 Rehan Marediya</p>
 </footer>
+  <script>
+const text = ["Aspiring Software Developer", "Web Developer", "Android Developer"];
+let i = 0, j = 0, currentText = "", isDeleting = false;
+
+function type() {
+  const typing = document.getElementById("typing");
+
+  if (i < text.length) {
+    if (!isDeleting && j <= text[i].length) {
+      currentText = text[i].substring(0, j++);
+    } else if (isDeleting && j >= 0) {
+      currentText = text[i].substring(0, j--);
+    }
+
+    typing.innerHTML = currentText;
+
+    if (j === text[i].length) isDeleting = true;
+    if (j === 0) {
+      isDeleting = false;
+      i = (i + 1) % text.length;
+    }
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+</script>
 
 </body>
 </html>
