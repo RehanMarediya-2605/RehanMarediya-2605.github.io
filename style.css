@@ -578,20 +578,4 @@ body {
 
 
 
-  .section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.section h2::after {
-  content: "";
-  width: 50px;
-  height: 3px;
-  background: #38bdf8;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-}
-
-}
+ 
