@@ -98,7 +98,7 @@ nav {
   font-weight: 600;
   background: linear-gradient(90deg, #38bdf8, #6366f1);
   color: black;
-  transition: 0.3s;
+ transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -565,5 +565,33 @@ body {
     width: 100%;
     text-align: center;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #38bdf8;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
 
 }
