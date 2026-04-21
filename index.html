@@ -300,9 +300,12 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-  <script>
+ <script>
 const form = document.querySelector(".contact-form");
 const msg = document.getElementById("success-msg");
+
+// 👇 ye line add karo
+msg.style.display = "none";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -319,7 +322,7 @@ form.addEventListener("submit", async (e) => {
     msg.style.display = "block";
     form.reset();
   } else {
-    alert("❌ Error sending message");
+    alert("❌ Something went wrong!");
   }
 });
 </script>
