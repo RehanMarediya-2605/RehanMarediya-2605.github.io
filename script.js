@@ -46,36 +46,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-const form = document.querySelector(".contact-form");
-
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
-const button = document.getElementById("submit-btn");
-
-// Initially disable
-button.disabled = true;
-button.style.opacity = "0.5";
-
-function checkInputs() {
-  if (
-    nameInput.value.trim() !== "" &&
-    emailInput.value.trim() !== "" &&
-    messageInput.value.trim() !== ""
-  ) {
-    button.disabled = false;
-    button.style.opacity = "1";
-  } else {
-    button.disabled = true;
-    button.style.opacity = "0.5";
-  }
-}
-
-nameInput.addEventListener("input", checkInputs);
-emailInput.addEventListener("input", checkInputs);
-messageInput.addEventListener("input", checkInputs);
-
-form.addEventListener("submit", () => {
-  button.innerText = "Sending...";
-  button.disabled = true;
-});
