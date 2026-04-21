@@ -46,7 +46,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-  <script>
 const form = document.querySelector(".contact-form");
 
 const nameInput = document.getElementById("name");
@@ -58,7 +57,6 @@ const button = document.getElementById("submit-btn");
 button.disabled = true;
 button.style.opacity = "0.5";
 
-// Check inputs
 function checkInputs() {
   if (
     nameInput.value.trim() !== "" &&
@@ -73,14 +71,11 @@ function checkInputs() {
   }
 }
 
-// Listen typing
 nameInput.addEventListener("input", checkInputs);
 emailInput.addEventListener("input", checkInputs);
 messageInput.addEventListener("input", checkInputs);
 
-// On submit
 form.addEventListener("submit", () => {
   button.innerText = "Sending...";
   button.disabled = true;
 });
-</script>
